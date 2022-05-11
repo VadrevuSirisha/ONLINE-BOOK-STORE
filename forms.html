@@ -1,0 +1,57 @@
+<!Doctype html>
+<html>
+<head>
+<title>Online book store</title>
+<style>
+body{
+background-image:url("https://wallpapercave.com/wp/wp7942274.jpg")
+}
+</style>
+</head>
+<body>
+<script>
+function val()
+{
+ var p=document.forms.fname.value;
+ var q=document.forms.lname.value;
+ var r=document.forms.email.value;
+ var a=document.forms.pass.value;
+ var s=r.substr(r.length -9);
+ if(p=="" || p==null)
+ {
+  alert("First name should not be null");
+  return false;
+ }
+ else if(q==""||q==null)
+{
+ alert("last name can't be null");
+ return false;
+}
+else if(s==""|| s!="@gitam.in")
+{
+ alert("invalid email");
+ return false;
+}
+}
+</script>
+<h1><b><center>Online book store</center></h1></p>
+<p>
+<center>
+<form name="forms" method="post" onsubmit="return val()" action="next.html">
+First name:<input type="text" name="fname"><br><br>
+Last name:<input type="text" name="lname"><br><br>
+<label>Gender</label>
+<select name="Gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Others">Others</option>
+  </select><br><br>
+Email:<input type="text" name ="email"><br><br>
+Password:<input type="text" name="pass"><br><br>
+Age: <input type="date"><br><br>
+<button type ="submit" class="button">Submit</button>
+
+<input type="reset" Value="Reset">
+</center>
+</p>
+</form>
